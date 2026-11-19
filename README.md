@@ -9,7 +9,7 @@ Open it during the school day and it tells you which period you're in, when it e
 | Page | File | What it does |
 | --- | --- | --- |
 | Home | `index.html` + `script.js` | Live view of the current and next period. Refreshes every minute. The background color shows the day type: light blue for a regular day, orange for a special schedule, beige for no school. |
-| Calendar | `calender.html` + `calender.js` | The school-year calendar, embedded from a published Google Slides deck. It opens on the slide for the current month. |
+| Calendar | `calendar.html` + `calendar.js` | The school-year calendar, embedded from a published Google Slides deck. It opens on the slide for the current month. |
 | Countdown | `countdown.html` + `countdown.js` | School days left until the last day (June 16, 2027), with a progress bar for the year. Weekends and holidays aren't counted. |
 | Lobo | `lobo.html` | The latest issue of the Lobo, the school magazine, as an embedded PDF with open and download buttons. Past issues are in `lobo/`. |
 | Contact | `contact.html` | How to send feedback or report a bug. |
@@ -33,7 +33,7 @@ At the start of each year:
 1. In `scheduleData.json`, update `school_info.academic_year`, replace `holidays` with the new year's dates, and clear out last year's `special_schedules`.
 2. If the bell times changed, edit `schedule.period_times`.
 3. In `countdown.js`, update `endDate` and `schoolYearStart`. Also change the end date shown in `countdown.html`.
-4. If there's a new calendar deck, update the iframe `src` in `calender.html`. `calender.js` assumes slide 1 is September and slide 10 is June.
+4. If there's a new calendar deck, update the iframe `src` in `calendar.html`. `calendar.js` assumes slide 1 is September and slide 10 is June.
 
 To add a special schedule (e.g. a half day), add an entry to `special_schedules` with the date, a name, and the full `period_times` for that day. Period keys that are numbers show as "Period N". Other keys (`homeroom`, `lunch`, `passing_period_*`, `party`, `concert`, `market`, `debrief`) get friendly names in `updateDisplay()` in `script.js`. If you add a new kind of block, add its label there.
 

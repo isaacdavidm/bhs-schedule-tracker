@@ -50,7 +50,7 @@ You need to add the cookie consent banner to all your pages. Here's what to add:
 
 #### Files that need updating:
 - ✅ `index.html` (already done in the updated version provided)
-- `calender.html`
+- `calendar.html`
 - `contact.html`
 - `about.html`
 
